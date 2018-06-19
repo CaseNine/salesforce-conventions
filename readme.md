@@ -8,18 +8,12 @@ We have a few Apex specials that are described in this document.
 
 ## Content
 
-First
-
-Sobject initialization
-
-SOQL Query
-
-Column limit
-
-Salesforce API names
-
-Use of repositories
-
+* [First](#first)
+* [Sobject initialization](#sobject-initialization)
+* [SOQL Query](#soql-query)
+* [Column limit](#column-limit)
+* [Salesforce API names](#salesforce-api-names)
+* [Use of repositories](#use-of-repositories)
 
 
 ## Sobject initialization
@@ -35,6 +29,8 @@ Message__c message = new Message__c(
   Start_Date__c = Date.today()
 );
 ```
+
+
 ## SOQL Query
 
 We see a query as a non-block-like statement. So here you must use continuation indents: ( [https://google.github.io/styleguide/javaguide.html#s4.5.2-line-wrapping-indent](https://google.github.io/styleguide/javaguide.html#s4.5.2-line-wrapping-indent))
@@ -63,7 +59,7 @@ We currently use a column limit of 120. And not the 80/100 from Google. This bec
 
 All API names are written in [PascalCase](http://wiki.c2.com/?PascalCase).
 
-For example, FieldTest\_\_c or FakeObject\_\_c.
+For example, `FieldTest__c` or `FakeObject__c`.
 
 
 
@@ -77,4 +73,6 @@ In addition, the unit test classes will use fake mock repositories instead, so t
 
 ## Testing
 
-Repositories require fake repositories to test application classes that use repositories. All Test classes should have IsParallel=true, except Repository test classes. Only use Test.startTest() / Test.stopTest() when needed.
+Repositories require fake repositories to test application classes that use repositories. All Test classes should have `@IsTest(IsParallel=true)`, except Repository test classes. 
+
+Only use `Test.startTest()` & `Test.stopTest()` when needed.
