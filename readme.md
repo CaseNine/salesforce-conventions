@@ -25,7 +25,7 @@ Use of repositories
 ## Sobject initialization
 
 We see a Sobject initialization as an initialization of a Map &lt;Y, Z&gt;. How you can see a Map or List construct like: https://google.github.io/styleguide/javaguide.html#s4.8.3.1-array-initializers. So we assume that a Sobject initialization is a Block-like construct. (https://google.github.io/styleguide/javaguide.html#s4-formatting)
-```
+```java
 Bericht__c bericht = new Bericht__c(
   Netwerk__c = [SELECT Id FROM Netwerk__c LIMIT 1].Id,
   RecordTypeId = rondrekeningGestartRecordTypeId,
@@ -38,7 +38,7 @@ Bericht__c bericht = new Bericht__c(
 ## SOQL Query
 
 We see a query as a non-block-like statement. So here you must use continuation indents: ( [https://google.github.io/styleguide/javaguide.html#s4.5.2-line-wrapping-indent](https://google.github.io/styleguide/javaguide.html#s4.5.2-line-wrapping-indent))
-```
+```java
 List<Aansluiting__c> aansluitingen = [
     SELECT EAN_code__c
     FROM Aansluiting__c
@@ -66,8 +66,6 @@ All API names are written in [PascalCase](http://wiki.c2.com/?PascalCase).
 For example, FieldTest\_\_c or FakeObject\_\_c.
 
 
-
-##
 
 ## Use of repositories
 
