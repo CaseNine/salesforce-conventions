@@ -26,26 +26,26 @@ Use of repositories
 
 We see a Sobject initialization as an initialization of a Map &lt;Y, Z&gt;. How you can see a Map or List construct like: https://google.github.io/styleguide/javaguide.html#s4.8.3.1-array-initializers. So we assume that a Sobject initialization is a Block-like construct. (https://google.github.io/styleguide/javaguide.html#s4-formatting)
 ```java
-Bericht__c bericht = new Bericht__c(
-  Netwerk__c = [SELECT Id FROM Netwerk__c LIMIT 1].Id,
-  RecordTypeId = rondrekeningGestartRecordTypeId,
-  Status__c = 'Gestart',
-  Verzend_Methode__c = 'API',
-  Product_Groep__c = 'Elektra',
-  RondrekeningDatum__c = Date.today()
+Message__c message = new Message__c(
+  User__c = [SELECT Id FROM User LIMIT 1].Id,
+  RecordTypeId = recordTypeId,
+  Status__c = 'Started',
+  Send_Method__c = 'API',
+  Type__c = 'Invoice',
+  Start_Date__c = Date.today()
 );
 ```
 ## SOQL Query
 
 We see a query as a non-block-like statement. So here you must use continuation indents: ( [https://google.github.io/styleguide/javaguide.html#s4.5.2-line-wrapping-indent](https://google.github.io/styleguide/javaguide.html#s4.5.2-line-wrapping-indent))
 ```java
-List<Aansluiting__c> aansluitingen = [
-    SELECT EAN_code__c
-    FROM Aansluiting__c
-    WHERE Netwerk__c = :mutatieAanvraagBericht.Netwerk__c
-        AND Product__c = :mutatieAanvraagBericht.Product_Groep__c
-        AND Koppelpunt__c = false
-        OR Iets__c = 'Iets anders'
+List<Message__c> messages = [
+    SELECT Name
+    FROM Message__c
+    WHERE User__c = :originalMessage.User__c
+        AND Type__c = :originalMessage.Type__c
+        AND Started__c = false
+        OR Item__c = 'Test case'
 ];
 ```
 
