@@ -32,7 +32,7 @@ We have a few Apex specials that are described in this document.
 
 ## Architecture
 
-The direction of dependencies go always from outside in:
+The direction of dependencies always go outside in:
 
 ![Architecture](architecture.jpg)
 
