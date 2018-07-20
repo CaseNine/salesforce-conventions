@@ -1,5 +1,7 @@
 # Code convention - CaseNine
 
+![Code review](Conventions.jpeg)
+
 ## First
 
 Based upon the Google Java Style Guide: [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)
