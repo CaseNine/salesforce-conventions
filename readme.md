@@ -44,7 +44,7 @@ That way you are in control of the order in which things are executed.
 ## Testing
 There should be unit tests for your code. A unit test should be independent and do an assert for each unit. The tests for business logic should be independent so it has no dependencies on databases or external services. An exception is a repository test -- there you want to test a database transaction.
 
-The unit tests should be clean and treated as part of the codebase. They are part of your deployment process.
+Unit tests should be clean and treated as part of the codebase. They are part of your deployment process.
 
 The purpose of a unit test -- it should give quick feedback to check if the production code does what we expect it to do. The unit test is not responsible for testing the infrastructure and application chain. We don’t have to test the framework. The unit test does not know in what context the code will run, so therefore it should be independent and mocking should always be used when necessary. Therefore, a unit test cannot depend on the environment it runs in or data it can access, it should be self-sufficient and able to run in any environment.
 
