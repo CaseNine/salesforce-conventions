@@ -1,6 +1,6 @@
 # Code convention - CaseNine
 
-![Code review](CaseNine Conventions.001.jpeg)
+![Code review](Conventions.jpeg)
 
 ## First
 
