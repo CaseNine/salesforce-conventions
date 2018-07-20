@@ -46,7 +46,7 @@ There should be unit tests for your code. A unit test should be independent and 
 
 The unit test should be clean and treated as part of the codebase. They are part of your deployment process.
 
-The purpose of a unit test -- it should give quick feedback to check if the production code does what we expect it to do. The unit test is not responsible for testing the infrastructure and application chain. We don’t have to test the framework. The unit test does not know in what context the code will run, so therefore it should be independent and mocking should always be used when necessary.
+The purpose of a unit test -- it should give quick feedback to check if the production code does what we expect it to do. The unit test is not responsible for testing the infrastructure and application chain. We don’t have to test the framework. The unit test does not know in what context the code will run, so therefore it should be independent and mocking should always be used when necessary. Therefore, a unit test cannot depend on the environment it runs in or data it can access, it should be self-sufficient and able to run in any environment.
 
 For example, when testing functionality that is called from a trigger, you want to unit-test the scoped pieces of code that will be executed separately. For example, a unit test will not test the whole process of a record going through a trigger, or a process from UI to database; a unit test is not the place to do that.
 
