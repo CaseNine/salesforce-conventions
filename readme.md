@@ -36,7 +36,7 @@ The direction of dependencies go always from outside in:
 
 ![Architecture](architecture.jpg)
 
-1. API's, Controllers, Infrastructure (repositories for example), or crosscurring concerns
+1. API's, Controllers, Infrastructure (repositories for example), or crosscutting concerns
 2. Domain interactors
 3. Domain entities
 
