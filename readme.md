@@ -53,7 +53,7 @@ For example, when testing functionality that is called from a trigger, you want 
 A unit test will also help with designing your code. With TDD you will write unit tests and scenarios. After that, you will improve the code, so that it will make only these tests pass.
 
 
-Reference: [https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html](First-Class Tests)
+Reference: [First-Class Tests](https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html)
 
 ### About the use of fakes
 All database interactions require fakes in order to test application classes that use repositories. All Test classes 
