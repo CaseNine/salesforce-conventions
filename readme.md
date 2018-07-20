@@ -83,6 +83,10 @@ repositories is also required.
 
 ## Limits
 
+To stay within Governor Limits, avoid using more SOQL queries and DML statements than absolutely necessary by calling on a repository as little as possible.
+Repository interaction should be done outside of loop-brackets to minimize the amounts of calls and statements made.
+
+Bulkify records into a Map or List before manipulation so we can keep the amount of queries and statements within one Apex transaction to a minimum.
 
 ## Style
 
