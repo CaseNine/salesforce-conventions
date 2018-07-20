@@ -40,22 +40,19 @@ The direction of dependencies go always from outside in:
 2. Domain interactors
 3. Domain entities
 
-Reference: [The Clean Architecture
-](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
+Reference: [The Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 Quote:
 > So what does the architecture of your application scream? When you look at the top level directory structure, and the source files in the highest level package; do they scream: Health Care System, or Accounting System, or Inventory Management System? Or do they scream: Rails, or Spring/Hibernate, or ASP?  
 
-Reference: [Screaming Architecture
-](https://8thlight.com/blog/uncle-bob/2011/09/30/Screaming-Architecture.html)
+Reference: [Screaming Architecture](https://8thlight.com/blog/uncle-bob/2011/09/30/Screaming-Architecture.html)
 
 
 ## Quality
 
 
 
-Reference: [Simple, correct, fast: in that order
-](https://drewdevault.com/2018/07/09/Simple-correct-fast.html)
+Reference: [Simple, correct, fast: in that order](https://drewdevault.com/2018/07/09/Simple-correct-fast.html)
 
 
 ### Triggers
