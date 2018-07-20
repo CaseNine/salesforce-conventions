@@ -9,26 +9,34 @@ We have a few Apex specials that are described in this document.
 
 ## Content
 
-* [First](#first)
-* [Sobject initialization](#sobject-initialization)
-* [SOQL Query](#soql-query)
-* [Column limit](#column-limit)
-* [Salesforce API names](#salesforce-api-names)
-* [Use of repositories](#use-of-repositories)
+* [Story](#story)
+* [Architecture](#architecture)
+* [Quality](#quality)
+    * [Triggers](#triggers)
 * [Testing](#testing)
-* [Triggers](#triggers)
+    * [About the use of fakes](#about-the-use-of-fakes)
+    * [About Test.start/stopTest](#about-test.start/stoptest)
+    * [About Triggers](#about-triggers)
+* [Principles](#principles)
+    * [Use of repositories](#use-of-repositories)
+* [Limits](#limits)
+* [Style](#style)
+    * [Sobject initialization](#sobject-initialization)
+    * [SOQL Query](#soql-query)
+    * [Column limit](#column-limit)
+    * [Salesforce API names](#salesforce-api-names)
 
 
 ## Story
 
 
-## Architectuur
+## Architecture
 
 
-## Kwaliteit
+## Quality
 
 
-## Triggers
+### Triggers
 Because Salesforce does not enforce any particiary order in which triggers are executed, only write one trigger per SObject. 
 That way you are in control of the order in which things are executed. 
 
@@ -61,7 +69,7 @@ you actually don't any additional tests for database triggers. The business logi
 kept out of the trigger and be put in domain classes.  
 
 
-## Principes
+## Principles
 
 
 ### Use of repositories
