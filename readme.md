@@ -32,8 +32,27 @@ We have a few Apex specials that are described in this document.
 
 ## Architecture
 
+The direction of dependencies always go outside in:
+
+![Architecture](architecture.jpg)
+
+1. API's, Controllers, Infrastructure (repositories for example), or crosscutting concerns
+2. Domain interactors
+3. Domain entities
+
+Reference: [The Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)
+
+Quote:
+> So what does the architecture of your application scream? When you look at the top level directory structure, and the source files in the highest level package; do they scream: Health Care System, or Accounting System, or Inventory Management System? Or do they scream: Rails, or Spring/Hibernate, or ASP?  
+
+Reference: [Screaming Architecture](https://8thlight.com/blog/uncle-bob/2011/09/30/Screaming-Architecture.html)
+
 
 ## Quality
+
+
+
+Reference: [Simple, correct, fast: in that order](https://drewdevault.com/2018/07/09/Simple-correct-fast.html)
 
 
 ### Triggers
@@ -85,13 +104,21 @@ kept out of the trigger and be put in domain classes.
 
 ## Principles
 
+In order to make clean code, use the following principles of SOLID:
+- SRP: Single Responsibility Principal
+- OCP: Open/Close Principal
+- LSP: Liscov Substitution Principal
+- ISP: Interface Segregation Principle
+- DIP: Dependency Inversion Principle
 
 ### Use of repositories
+
+Repositories are samples of implementing the Dependency Inversion Principle.
 
 The use of repositories is a must in order to execute SOQL queries or DML statements. So all interactions with the 
 database will be done in these repositories and not directly in business logic classes.
 
-In addition, the unit test classes will use fake mock repositories instead, so the use of interfaces for this 
+In addition, the unit test classes will use fake mock repositories instead, so the use of interfaces for 
 repositories is also required.
 
 
